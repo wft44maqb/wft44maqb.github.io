@@ -4,31 +4,41 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
     <meta name="referrer" content="no-referrer">
-    <title>播放器</title>
+    <title>xgplayer</title>
     <style type="text/css">
       html, body {width:100%;height:100%;margin:auto;overflow: hidden;}
-      body {display:flex;}
-      #mse {flex:auto;}
     </style>
-    <script type="text/javascript">
-      window.addEventListener('resize',function(){document.getElementById('mse').style.height=window.innerHeight+'px';});
-    </script>
   </head>
   <body>
     <div id="mse"></div>
     <script src="//cdn.jsdelivr.net/npm/xgplayer/browser/index.js" charset="utf-8"></script>
-    <script src="//cdn.jsdelivr.net/npm/xgplayer-hls/dist/index.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      let player = new HlsPlayer({
-          id: 'mse',
-          url: '//uc6.i-cable.com/liveJoemud_ts/_definst_/4-24e4f279-1627836845-1627923425-cfe7ba551483726a9d37936ec1fd58a9-8d95550726c3bac_987-03/freehd209.live/playlist.m3u8',
-          isLive: true,
-          autoplay: true,
-          playsinline: true,
-          height: window.innerHeight,
-          width: window.innerWidth,
-		  noLog: true
+      <script src="//cdn.jsdelivr.net/npm/xgplayer-hls.js/browser/index.js" charset="utf-8"></script><script>
+      let player = new HlsJsPlayer({
+		"id": "mse",
+		"playsinline": true,
+		"whitelist": [
+				""
+		],
+		"url": "https://uc6.i-cable.com/liveJoemud_ts/_definst_/4-24e4f279-1627836845-1627923425-cfe7ba551483726a9d37936ec1fd58a9-8d95550726c3bac_987-03/freehd209.live/playlist.m3u8",
+		"volume": 1,
+		"autoplay": true,
+		"fluid": true,
+		"thumbnail": {
+				"pic_num": 44,
+				"width": 160,
+				"height": 90,
+				"col": 10,
+				"row": 10,
+				"urls": [
+						""
+				]
+		},
+		"screenShot": true,
+		"download": true,
+		"pip": true,
+		"noLog": true
       });
-    </script>
+      
+          </script>
   </body>
 </html>
