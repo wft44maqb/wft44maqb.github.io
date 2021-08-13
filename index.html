@@ -15,30 +15,33 @@
       <script src="//cdn.jsdelivr.net/npm/xgplayer-hls.js/browser/index.js" charset="utf-8"></script><script>
       let player = new HlsJsPlayer({
 		"id": "mse",
+		"url": "https://uc6.i-cable.com/liveJoemud_ts/_definst_/4-24e4f646-1628834354-1628920934-7d4cbe75497c8370e81a10439b8227b9-8d95e62f433ff3d_663-03/freehd209.live/playlist.m3u8",
 		"playsinline": true,
 		"whitelist": [
 				""
 		],
-		"url": "https://uc6.i-cable.com/liveJoemud_ts/_definst_/4-24e4f279-1627836845-1627923425-cfe7ba551483726a9d37936ec1fd58a9-8d95550726c3bac_987-03/freehd209.live/playlist.m3u8",
-		"volume": 1,
 		"autoplay": true,
-		"fluid": true,
+		"volume": 1,
+		"pip": true,
+		"noLog": true,
+		"screenShot": true,
 		"thumbnail": {
 				"pic_num": 44,
 				"width": 160,
 				"height": 90,
 				"col": 10,
 				"row": 10,
+				
 				"urls": [
 						""
 				]
 		},
-		"screenShot": true,
-		"download": true,
-		"pip": true,
-		"noLog": true
+		"rotate": {
+				"clockwise": false,
+				"innerRotate": false
+		}
       });
-      
+      player.emit('resourceReady', [{"name":"香港有線新聞","url":"https://uc6.i-cable.com/liveJoemud_ts/_definst_/4-24e4f646-1628834354-1628920934-7d4cbe75497c8370e81a10439b8227b9-8d95e62f433ff3d_663-03/freehd209.live/playlist.m3u8"},{"name":"香港Now新聞","url":"https://ewcdnsite08.nowe.com/session/09-6ade059bddbfaa3b0e292dceee82a/Content/HLS/LIVE/Channel(HLS_CH332N)/index.m3u8?token=1d0ac935341187a12a23e38571c18c0e_1628856282"}])
           </script>
   </body>
 </html>
